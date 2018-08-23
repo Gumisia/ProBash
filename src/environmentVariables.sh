@@ -25,7 +25,32 @@ echo "Liczba owoców: $count ${fruit}(ek)."
 HTTP_PROXY=192.168.0.2:3128 #jaki serwer proxy powinien być uzyty dla połączenia internetowego
 export HTTP_PROXY # deklarowanie jednej lub kilku zmiennych, które będą dziedziczone przez zadania potemne
 
-export PATH=:"PATH:/home/user/bin"
+PATH="$PATH:/home/user/bin"
+export PATH
+echo $PATH
 
+echo '$zmienna'
+echo "$zmienna"
 
+var="12345678901234567890"
+echo ${#var}
+
+echo $SHELL
+echo $0
+
+if [ $UID -ne 0 ]; then
+echo Użytkownik inny niż root. Uruchom jako użytkownik root.
+else
+echo Użytkownik root
+fi
+
+#if test $UID -ne 0:1
+#    then
+#        echo Użytkownik inny niż root. Uruchom jako użytkownik root.
+#    else
+#        echo Użytkownik root
+#    fi
+
+#$ cat ~/.bashrc | grep PS1
+#PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 
